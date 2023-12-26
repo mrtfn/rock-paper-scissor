@@ -31,15 +31,18 @@ choices = [rock, paper, scissors]
 user_choice = int(input("welcome to the RPS just choose between rock 0, paper 1 ans scissors 2 : "))
 computer_choice = random.randint(0,2)
 
-print(f"You chose {user_choice}{choices[user_choice]}")
-print(f"computer chose {computer_choice}{choices[computer_choice]}")
+if user_choice > 2 or user_choice < 0 :
+    print("Input out of range, valid inputs are : 0, 1, 2")
+else:
+    print(f"You chose {user_choice}{choices[user_choice]}")
+    print(f"computer chose {computer_choice}{choices[computer_choice]}")
 
-if user_choice == 0 and computer_choice == 2:
-    print("user wins")
-elif computer_choice > user_choice:
-    print("computer wins")
-elif user_choice > computer_choice:
-    print("user wins")
-elif user_choice == computer_choice:
-    print("draw")
-else: print("invalid number you have entered, rerun the app.")
+    if user_choice == 0 and computer_choice == 2:
+        print("user wins")
+    elif computer_choice > user_choice:
+        print("computer wins")
+    elif user_choice > computer_choice:
+        print("user wins")
+    elif user_choice == computer_choice:
+        print("draw")
+    else:print("invalid input")
