@@ -42,3 +42,4 @@ elif user_choice > computer_choice:
     print("user wins")
 elif user_choice == computer_choice:
     print("draw")
+else: print("invalid number you have entered, rerun the app.")
